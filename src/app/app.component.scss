@@ -1,0 +1,110 @@
+* {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	font-family: "Helvetica Neue";
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	margin-top: 10px;
+}
+
+p {
+	padding: 20px;
+	font-size: 18px;
+	color: steelblue;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 200;
+	color: mediumpurple;
+}
+
+.header {
+	text-align: center;
+	align-items: center;
+	font-weight: 200;
+	padding: 40px;
+	margin: 0;
+}
+
+.arrow-down {
+	content: url("../assets/arrow-down.png");
+	text-align: center;
+	width: 60px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.column {
+	flex: 25%;
+	max-width: 25%;
+
+	img {
+		vertical-align: middle;
+		width: 100%;
+		height: 200px;
+	}
+}
+
+.image-text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-weight: 200;
+	font-size: 18px;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.5s ease;
+	background-color: mediumpurple;
+}
+
+.column.container {
+	position: relative;
+	width: 50%;
+}
+
+.column.container:hover .overlay {
+	opacity: 0.8;
+}
+
+.center-cropped {
+	object-fit: none;
+	object-position: center;
+}
+@media screen and(max-width: 800px) {
+	.column {
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+@media screen and(max-width: 600px) {
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+}

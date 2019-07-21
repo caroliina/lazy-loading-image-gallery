@@ -1,0 +1,22 @@
+<div class="header">
+  <h1>
+    {{title}}
+  </h1>
+  <p>{{introduction}}</p>
+  <div class="arrow-down"></div>
+</div>
+
+<div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()">
+  <div class="row">
+    <div class="column container" *ngFor="let image of images">
+      <a href={{image.url}} target="_blank">
+        <img class="center-cropped" src={{image.url}} />
+        <div class="overlay">
+          <div class="image-text">
+            {{image.text}}
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
