@@ -14,7 +14,7 @@ export class AppComponent {
   }
 
   API_URL = 'https://api.unsplash.com/';
-  APPLICATION_ID = '8b1386cf2284bdb4a35742505a7280672f37ad0468897857b5b89d7290dd3bfa';
+  APPLICATION_ID = '';
   ENDPOINT = '/photos/random/'
 
   title = 'Caroliina\'s Image Browser';
